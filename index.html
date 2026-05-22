@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUINOX | Cairo Hack Club — 14–16 AUGUST 2026</title>
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23d4a843'/><stop offset='100%25' style='stop-color:%23e8c860'/></linearGradient></defs><circle cx='32' cy='32' r='28' fill='none' stroke='url(%23g)' stroke-width='2.5'/><circle cx='32' cy='32' r='10' fill='url(%23g)' opacity='0.9'/><line x1='32' y1='4' x2='32' y2='18' stroke='%23d4a843' stroke-width='1.5'/><line x1='32' y1='46' x2='32' y2='60' stroke='%23d4a843' stroke-width='1.5'/><line x1='4' y1='32' x2='18' y2='32' stroke='%23d4a843' stroke-width='1.5'/><line x1='46' y1='32' x2='60' y2='32' stroke='%23d4a843' stroke-width='1.5'/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-emblem">
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-core"></div>
+        </div>
+        <div class="preloader-title">EQUINOX</div>
+        <div class="preloader-dots">
+            <span class="preloader-dot"></span>
+            <span class="preloader-dot"></span>
+            <span class="preloader-dot"></span>
+        </div>
+        <div class="preloader-subtitle">Aligning the stars…</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- Background Layers -->
+    <div id="egypt-bg"></div>
+    <div class="pyramid-silhouette"></div>
+    <div class="pyramid-silhouette second"></div>
+    <div class="sand-dunes-egypt"></div>
+    <div class="hiero-bg"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="interface">
+            <div style="display:flex; justify-content:space-between; width:100%;">
+                <div class="scan-data">TEMPLE_v.4.0<br>STATUS: <span>ALIGNED</span><br>MA'AT: 99.97%</div>
+                <div class="scan-data" style="text-align:right;">COORD: 30.0131° N<br>GIZA_PLATEAU<br>EVENT_IN: <span id="countdown-mini">—</span></div>
+            </div>
+        </div>
+
+        <!-- Egyptian Solar Disk Animation -->
+        <div class="solar-disk-egypt" id="solarDisk">
+            <div class="disk-ring one"></div>
+            <div class="disk-ring two"></div>
+            <div class="disk-ring three"></div>
+            <!-- sun rays -->
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(0deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(45deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(90deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(135deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(180deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(225deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(270deg);"></div>
+            <div class="sun-ray" style="transform: translate(-50%, -100%) rotate(315deg);"></div>
+        </div>
+
+        <!-- Hero Text -->
+        <div class="hero">
+            <p class="hero-eyebrow"></p>
+            <h1>EQUINOX</h1>
+            <p class="hero-subtitle" style="direction: rtl;"></p>
+        </div>
+
+        <!-- Scroll CTA -->
+        <div class="scroll-wrapper interactive" id="scrollTrigger">
+    <div class="scroll-symbol">
+        <i class="fa-solid fa-ankh"></i>
+        <div class="symbol-ring"></div>
+    </div>
+    <span class="scroll-text">Descend</span>
+</div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="stone-card reveal">
+            <span class="corner-glyph tl"><i class="fa-solid fa-ankh"></i></span>
+            <span class="corner-glyph tr"><i class="fa-solid fa-sun"></i></span>
+            <span class="corner-glyph bl"><i class="fa-solid fa-mountain"></i></span>
+            <span class="corner-glyph br"><i class="fa-solid fa-ankh"></i></span>
+            <i class="fa-solid fa-compass section-icon"></i>
+            <h2 class="section-title">The Pilgrimage</h2>
+            <p class="body-text"><span class="gold">Horizons Equinox</span> is a <span class="highlight">Hack Club</span> pilgrimage — a sacred journey to <span class="gold">Cairo, Egypt</span>, where the wisdom of the ancients converges with the craft of code. Three days of pure creation beneath the gaze of the Great Pyramid. No spectators. No lectures. <span class="highlight">Only building.</span></p>
+            <div class="info-grid">
+                <div class="info-item"><span class="info-icon"><i class="fa-solid fa-location-dot"></i></span><h4>Location</h4><p>Giza Plateau<br>Cairo, Egypt</p></div>
+                <div class="info-item"><span class="info-icon"><i class="fa-solid fa-calendar-days"></i></span><h4>Date</h4><p>14 – 16 August<br>2026</p></div>
+                <div class="info-item"><span class="info-icon"><i class="fa-solid fa-users"></i></span><h4>For</h4><p>Hack Clubbers<br>Worldwide</p></div>
+            </div>
+        </div>
+    </section>
+    <!-- Details -->
+                             <div class="accent-line"></div>
+
+    <section id="details">
+        <div class="stone-card reveal">
+            <span class="corner-glyph tl"><i class="fa-solid fa-diamond"></i></span>
+            <span class="corner-glyph tr"><i class="fa-solid fa-ankh"></i></span>
+            <span class="corner-glyph bl"><i class="fa-solid fa-sun"></i></span>
+            <span class="corner-glyph br"><i class="fa-solid fa-diamond"></i></span>
+            <i class="fa-solid fa-clock section-icon"></i>
+            <h2 class="section-title">The Alignment</h2>
+            <p class="body-text">The <span class="gold">Equinox</span> marks the moment when day and night stand in perfect balance — a celestial threshold. We gather at this precise alignment to build the future in the cradle of civilization. <span class="highlight">Three days.</span> <span class="gold">One pyramid.</span> Infinite possibility.</p>
+            <p class="body-text" style="font-size:0.85rem; color:#9a9078; letter-spacing:2px;"><i class="fa-solid fa-calendar-days"></i> 14 – 16 AUGUST 2026 &nbsp;|&nbsp; <i class="fa-solid fa-location-dot"></i> GIZA PLATEAU &nbsp;|&nbsp; <i class="fa-solid fa-globe"></i> CAIRO, EGYPT</p>
+            <div class="countdown-container">
+                <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">Days</div></div>
+                <div class="countdown-item"><div class="countdown-number" id="hours">00</div><div class="countdown-label">Hours</div></div>
+                <div class="countdown-item"><div class="countdown-number" id="minutes">00</div><div class="countdown-label">Minutes</div></div>
+                <div class="countdown-item"><div class="countdown-number" id="seconds">00</div><div class="countdown-label">Seconds</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+                             <div class="accent-line"></div>
+
+    <section id="manifesto">
+        <div class="stone-card reveal">
+            <span class="corner-glyph tl"><i class="fa-solid fa-ankh"></i></span>
+            <span class="corner-glyph tr"><i class="fa-solid fa-sun"></i></span>
+            <span class="corner-glyph bl"><i class="fa-solid fa-mountain"></i></span>
+            <span class="corner-glyph br"><i class="fa-solid fa-ankh"></i></span>
+            <i class="fa-solid fa-scroll section-icon"></i>
+            <h2 class="section-title">Manifesto</h2>
+            <p class="body-text">In the shadow of the <span class="gold">Great Pyramid</span>, we align the stars with silicon.<br><span class="highlight">Hack Club</span> summons the seekers — builders, dreamers, scribes of the unseen — to Cairo for three days of pure creation. We write code that echoes through millennia. We build monuments not of stone, but of <span class="gold">ideas</span>.</p>
+            <p class="body-text" style="font-style:italic; color:#b0a080;"><i class="fa-solid fa-quote-left" style="opacity:0.5;"></i> Credits : Mohamed Boolean <i class="fa-solid fa-quote-right" style="opacity:0.5;"></i></p>
+        </div>
+    </section>
+
+    <!-- Join -->
+                             <div class="accent-line"></div>
+
+    <section id="join">
+        <div class="stone-card reveal" style="padding:50px 48px;">
+            <span class="corner-glyph tl"><i class="fa-solid fa-ankh"></i></span>
+            <span class="corner-glyph tr"><i class="fa-solid fa-sun"></i></span>
+            <span class="corner-glyph bl"><i class="fa-solid fa-mountain"></i></span>
+            <span class="corner-glyph br"><i class="fa-solid fa-ankh"></i></span>
+            <i class="fa-solid fa-star section-icon"></i>
+            <h2 class="section-title" style="margin-bottom:16px;">Join the Alignment</h2>
+            <p class="body-text" style="margin-bottom:26px;">Ready to build beneath the gaze of the ancients?<br><span class="highlight">Registration is open.</span> The stars await.</p>
+            <a href="https://horizons.hackclub.com/app/events" class="btn-primary interactive-alt"><i class="fa-solid fa-arrow-right"></i> SIGN UP</a>
+        </div>
+    </section>
+                            <div class="accent-line"></div>
+
+
+    <footer class="site-footer">
+        <span class="footer-brand"><i class="fa-solid fa-ankh"></i> EQUINOX</span>
+        <p>Hack Club · Horizons · Cairo 2026</p>
+    </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
