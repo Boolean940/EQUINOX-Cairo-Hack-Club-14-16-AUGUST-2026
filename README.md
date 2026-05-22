@@ -1,0 +1,1 @@
+# EQUINOX-Cairo-Hack-Club-14-16-AUGUST-2026
